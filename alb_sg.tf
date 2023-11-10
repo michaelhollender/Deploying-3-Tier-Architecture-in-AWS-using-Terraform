@@ -31,6 +31,6 @@ resource "aws_security_group" "alb-security-group" {
     }
 
     tags = {
-        Name = "ALB Security Group"
+        Name = "WEB ALB Security Group"
     }
 }
