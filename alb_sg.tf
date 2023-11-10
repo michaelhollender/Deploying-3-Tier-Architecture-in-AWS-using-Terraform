@@ -1,6 +1,6 @@
-##################################
-## SG Application Load Balancer ##
-##################################
+######################################
+## SG WEB Application Load Balancer ##
+######################################
 
 resource "aws_security_group" "alb-security-group" {
     name        = "WEB ALB Security Group"
