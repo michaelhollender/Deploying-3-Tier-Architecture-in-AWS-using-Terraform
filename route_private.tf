@@ -38,7 +38,7 @@ resource "aws_route_table_association" "nat_route_app_3" {
 
 ###################################
 ## Route Association for DB Tier ##
-###################################\
+###################################
 
 resource "aws_route_table_association" "nat_route_db_1" {
     subnet_id      = aws_subnet.private-subnet-4.id
