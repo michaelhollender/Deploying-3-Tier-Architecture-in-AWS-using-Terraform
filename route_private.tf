@@ -1,6 +1,6 @@
-#################
-## Route Table ##
-#################
+##############################
+## Route Table for App Tier ##
+##############################
 
 resource "aws_route_table" "private-route-table" {
     vpc_id = aws_vpc.vpc_01.id
