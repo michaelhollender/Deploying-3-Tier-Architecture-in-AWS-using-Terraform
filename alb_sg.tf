@@ -23,6 +23,13 @@ resource "aws_security_group" "alb-security-group" {
         cidr_blocks = ["0.0.0.0/0"]
     }
 
+    ingress {
+        description = "ping access"
+        from_port = 8
+        to_port   = 0
+        protocol  = "icmp"
+    }
+
     egress {
         from_port   = 0
         to_port     = 0
