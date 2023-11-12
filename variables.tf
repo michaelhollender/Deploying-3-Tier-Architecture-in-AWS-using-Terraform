@@ -3,7 +3,7 @@
 ####################
 
 variable " vpc_cidr" {
-    dafault     = "10.0.0.0/16"
+    default     = "10.0.0.0/16"
     description = "VPC_cidr Block"
     type        = string
 }
@@ -34,7 +34,7 @@ variable "public-subnet-2-cidr" {
 ####################################
 
 variable "public-subnet-3-cidr" {
-    dafault     = "10.0.3.0/24"
+    default     = "10.0.3.0/24"
     description = "public_subnet2"
     type        = string
 }
