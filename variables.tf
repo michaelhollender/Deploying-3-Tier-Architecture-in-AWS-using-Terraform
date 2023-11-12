@@ -94,7 +94,7 @@ variable "private-subnet-5-cidr" {
 ##########################
 
 variable "private-subnet-6-cidr" {
-    default     = "10.0.8.0/24"
+    default     = "10.0.9.0/24"
     description = "private-subnet6"
     type        = string
 }
