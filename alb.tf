@@ -44,3 +44,13 @@ resource "aws_lb_listener" "alb_http_listener" {
         }
     }
 }
+
+
+#######################
+## Load Balancer DNS ##
+#######################
+
+output "lb_dns_name" {
+    description = "DNS name of the Load Balancer"
+    value       = "${aws_lb.application-load-balancer.dns_name}"
+}
