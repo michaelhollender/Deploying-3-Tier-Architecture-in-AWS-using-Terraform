@@ -3,8 +3,8 @@
 #################
 
 resource "aws_eip" "eip_nat" {
-  vpc = true
-
+  domain = "vpc"
+  
   tags = {
     Name = "eip1"
   }
