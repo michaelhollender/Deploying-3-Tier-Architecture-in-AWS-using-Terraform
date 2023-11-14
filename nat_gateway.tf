@@ -3,18 +3,18 @@
 #################
 
 resource "aws_eip" "eip_nat" {
-    vpc = true
+  vpc = true
 
-    tags = {
-        Name = "eip1"
-    }
+  tags = {
+    Name = "eip1"
+  }
 }
 
 resource "aws_nat_gateway" "Three_Tier_NAT" {
-    allocation_id = aws_eip.eip_nat.id
-    subnet_id     = aws_subnet.public-subnet-1.id
+  allocation_id = aws_eip.eip_nat.id
+  subnet_id     = aws_subnet.public-subnet-1.id
 
-    tags = {
-        Name = "3-Tier-NAT"
-    }
+  tags = {
+    Name = "3-Tier-NAT"
+  }
 }
