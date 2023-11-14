@@ -2,7 +2,7 @@
 ## EC2 Instance Web Tier ##
 ###########################
 
-resource "aws_instance" "3TierWebLaunchTemplate" {
+resource "aws_instance" "ThreeTierWebLaunchTemplate" {
     ami                    = "ami-"
     instance_type          = "t2.micro"
     subnet_id              = aws_subnet.public-subnet-1.id
@@ -20,7 +20,7 @@ resource "aws_instance" "3TierWebLaunchTemplate" {
 ## EC2 Instance App Tier ##
 ###########################
 
-resource "aws_instance" "3TierAppLaunchTemplate" {
+resource "aws_instance" "ThreeTierAppLaunchTemplate" {
     ami                    = "ami-"
     install_type           = "t2.micro"
     subnet_id              = aws_subnet.private-subnet-1.id
