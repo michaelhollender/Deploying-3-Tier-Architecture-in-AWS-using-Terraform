@@ -7,7 +7,7 @@ resource "aws_route_table" "private-route-table" {
 
   route {
     cidr_block     = "0.0.0.0/0"
-    nat_gateway_id = aws_nat_gateway.Three_Tier_NAT.vpc_id
+    nat_gateway_id = aws_nat_gateway.Three_Tier_NAT.id
   }
 
   tags = {
