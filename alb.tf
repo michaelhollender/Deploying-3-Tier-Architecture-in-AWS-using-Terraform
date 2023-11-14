@@ -34,7 +34,7 @@ resource "aws_lb_listener" "alb_http_listener" {
   port              = 80
   protocol          = "HTTP"
 
-  default "action" {
+  default_action" {
     type = "redirect"
 
     redirect {
