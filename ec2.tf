@@ -22,7 +22,7 @@ resource "aws_instance" "ThreeTierWebLaunchTemplate" {
 
 resource "aws_instance" "ThreeTierAppLaunchTemplate" {
   ami                    = "ami-05c13eab67c5d8861"
-  instance_type           = "t2.micro"
+  instance_type          = "t2.micro"
   subnet_id              = aws_subnet.private-subnet-1.id
   vpc_security_group_ids = [aws_security_group.ssh-security-group.id]
   key_name               = "3_tier_rsa_key"
