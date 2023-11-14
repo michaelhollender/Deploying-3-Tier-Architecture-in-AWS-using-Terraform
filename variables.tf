@@ -115,7 +115,7 @@ variable "private-subnet-6-cidr" {
 #############################
 
 variable "ssh-locate" {
-  default     = "your_ip_address"
+  default     = "10.0.1.0/24"
   description = "ip address"
   type        = string
 }
@@ -139,3 +139,13 @@ variable "multi_az-deployment" {
   description = "Create a Standby DB Instance"
   type        = bool
 }
+
+##############
+## Key Pair ##
+##############
+
+variable "three_tier_rsa_key" {
+  default     = "three_tier_rsa_key"
+  description = "RSA Key variable"
+  type        = string
+} 
