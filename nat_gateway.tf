@@ -10,7 +10,7 @@ resource "aws_eip" "eip_nat" {
     }
 }
 
-resource "aws_nat_gateway" "3_Tier_NAT" {
+resource "aws_nat_gateway" "Three_Tier_NAT" {
     allocation_id = aws_eip.eip_nat.id
     subnet_id     = aws_subnet.public-subnet-1.id
 
