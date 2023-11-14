@@ -7,7 +7,7 @@ resource "aws_launch_template" "auto-scaling-group" {
   image_id      = "ami-05c13eab67c5d8861"
   instance_type = "t2.micro"
   user_data     = file("install-apache.sh")
-  key_name      = "3_tier_rsa_key"
+  key_name      = "three_tier_rsa_key"
   network_interfaces {
     subnet_id       = aws_subnet.public-subnet-1.id
     security_groups = [aws_security_group.webserver-security-group.id]
@@ -35,7 +35,7 @@ resource "aws_launch_template" "auto-scaling-group-private" {
   name_prefix   = "auto-scaling-group-private"
   image_id      = "ami-05c13eab67c5d8861"
   instance_type = "t2.micro"
-  key_name      = "3_tier_rsa_key"
+  key_name      = "three_tier_rsa_key"
 
   network_interfaces {
     subnet_id       = aws_subnet.private-subnet-1.id
