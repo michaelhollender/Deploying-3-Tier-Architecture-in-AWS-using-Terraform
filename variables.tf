@@ -3,9 +3,9 @@
 ####################
 
 variable "vpc_cidr" {
-    default     = "10.0.0.0/16"
-    description = "VPC_cidr Block"
-    type        = string
+  default     = "10.0.0.0/16"
+  description = "VPC_cidr Block"
+  type        = string
 }
 
 
@@ -14,9 +14,9 @@ variable "vpc_cidr" {
 ####################################
 
 variable "public-subnet-1-cidr" {
-    default     = "10.0.1.0/24"
-    description = "public_subnet1"
-    type        = string
+  default     = "10.0.1.0/24"
+  description = "public_subnet1"
+  type        = string
 }
 
 ####################################
@@ -24,9 +24,9 @@ variable "public-subnet-1-cidr" {
 ####################################
 
 variable "public-subnet-2-cidr" {
-    default     = "10.0.2.0/24"
-    description = "public_subnet2"
-    type        = string
+  default     = "10.0.2.0/24"
+  description = "public_subnet2"
+  type        = string
 }
 
 ####################################
@@ -34,9 +34,9 @@ variable "public-subnet-2-cidr" {
 ####################################
 
 variable "public-subnet-3-cidr" {
-    default     = "10.0.3.0/24"
-    description = "public_subnet2"
-    type        = string
+  default     = "10.0.3.0/24"
+  description = "public_subnet2"
+  type        = string
 }
 
 ###########################
@@ -44,9 +44,9 @@ variable "public-subnet-3-cidr" {
 ###########################
 
 variable "private-subnet-1-cidr" {
-    default     = "10.0.4.0/24"
-    description = "private-subnet1"
-    type        = string
+  default     = "10.0.4.0/24"
+  description = "private-subnet1"
+  type        = string
 }
 
 ###########################
@@ -54,9 +54,9 @@ variable "private-subnet-1-cidr" {
 ###########################
 
 variable "private-subnet-2-cidr" {
-    default     = "10.0.5.0/24"
-    description = "private-subnet2"
-    type        = string
+  default     = "10.0.5.0/24"
+  description = "private-subnet2"
+  type        = string
 }
 
 ###########################
@@ -64,9 +64,9 @@ variable "private-subnet-2-cidr" {
 ###########################
 
 variable "private-subnet-3-cidr" {
-    default     = "10.0.6.0/24"
-    description = "private-subnet3"
-    type        = string
+  default     = "10.0.6.0/24"
+  description = "private-subnet3"
+  type        = string
 }
 
 ###########################
@@ -74,9 +74,9 @@ variable "private-subnet-3-cidr" {
 ###########################
 
 variable "private-subnet-4-cidr" {
-    default     = "10.0.7.0/24"
-    description = "private-subnet4"
-    type        = string
+  default     = "10.0.7.0/24"
+  description = "private-subnet4"
+  type        = string
 }
 
 ###########################
@@ -84,9 +84,9 @@ variable "private-subnet-4-cidr" {
 ###########################
 
 variable "private-subnet-5-cidr" {
-    default     = "10.0.8.0/24"
-    description = "private-subnet5"
-    type        = string
+  default     = "10.0.8.0/24"
+  description = "private-subnet5"
+  type        = string
 }
 
 ##########################
@@ -94,9 +94,9 @@ variable "private-subnet-5-cidr" {
 ##########################
 
 variable "private-subnet-6-cidr" {
-    default     = "10.0.9.0/24"
-    description = "private-subnet6"
-    type        = string
+  default     = "10.0.9.0/24"
+  description = "private-subnet6"
+  type        = string
 }
 
 
@@ -105,9 +105,9 @@ variable "private-subnet-6-cidr" {
 #############################
 
 variable "ssh-locate" {
-    default     = "your_ip_address"
-    description = "ip address"
-    type        = string
+  default     = "your_ip_address"
+  description = "ip address"
+  type        = string
 }
 
 #################
@@ -115,9 +115,9 @@ variable "ssh-locate" {
 #################
 
 variable "database-instance-class" {
-    default     = "db.t2.micro"
-    description = "The Database Instance Type"
-    type        = string
+  default     = "db.t2.micro"
+  description = "The Database Instance Type"
+  type        = string
 }
 
 ##############
@@ -125,7 +125,7 @@ variable "database-instance-class" {
 ##############
 
 variable "multi_az-deployment" {
-    default     = true
-    description = "Create a Standby DB Instance"
-    type        = bool
+  default     = true
+  description = "Create a Standby DB Instance"
+  type        = bool
 }
