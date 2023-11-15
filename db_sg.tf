@@ -8,10 +8,10 @@ resource "aws_security_group" "database-security-group" {
   vpc_id      = aws_vpc.vpc_01.id
 
   ingress {
-    description    = "MYSQL Access"
-    from_port      = "3306"
-    to_port        = "3306"
-    protocol       = "tcp"
+    description     = "MYSQL Access"
+    from_port       = "3306"
+    to_port         = "3306"
+    protocol        = "tcp"
     security_groups = ["${aws_security_group.webserver-security-group.id}"]
   }
 
