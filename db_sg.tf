@@ -12,7 +12,7 @@ resource "aws_security_group" "database-security-group" {
     from_port      = "3306"
     to_port        = "3306"
     protocol       = "tcp"
-    security_groups = ["{aws_security_group.webserver-security-group.id}"]
+    security_groups = ["${aws_security_group.webserver-security-group.id}"]
   }
 
   egress {
