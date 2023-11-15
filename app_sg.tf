@@ -29,7 +29,6 @@ resource "aws_security_group" "ssh-security-group" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-
   tags = {
     Name = "SSH Security Group"
   }
