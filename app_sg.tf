@@ -14,7 +14,7 @@ resource "aws_security_group" "ssh-security-group" {
     protocol    = "tcp"
     cidr_blocks = ["${var.ssh-locate}"]
   }
-  
+
   ingress {
     description = "ping access"
     from_port   = 8
