@@ -1,9 +1,29 @@
+########################
+###    Data source   ###
+########################
+
+data "aws_ami" "amazon_linux_2" {
+  most_recent = true
+  owners      = ["amazon"]
+
+  filter {
+    name   = "owner-alias"
+    values = ["amazon"]
+  }
+
+  filter {
+    name   = "name"
+    values = ["amzn2-ami-hvm*"]
+  }
+}
+
+
 ###########################
 ## EC2 Instance Web Tier ##
 ###########################
 
 resource "aws_instance" "ThreeTierWebLaunchTemplate" {
-  ami                    = "ami-05c13eab67c5d8861"
+  ami                    = data.aws_ami.amazon_linux_2.id
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.public-subnet-1.id
   vpc_security_group_ids = [aws_security_group.webserver-security-group.id]
@@ -21,7 +41,7 @@ resource "aws_instance" "ThreeTierWebLaunchTemplate" {
 ###########################
 
 resource "aws_instance" "ThreeTierAppLaunchTemplate" {
-  ami                    = "ami-05c13eab67c5d8861"
+  ami                    = data.aws_ami.amazon_linux_2.id
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.private-subnet-1.id
   vpc_security_group_ids = [aws_security_group.ssh-security-group.id]
