@@ -4,7 +4,7 @@
 
 resource "aws_launch_template" "auto-scaling-group" {
   name_prefix   = "auto-scaling-group"
-  image_id      = "ami-05c13eab67c5d8861"
+  image_id      = data.aws_ami.amazon_linux_2.id
   instance_type = "t2.micro"
   user_data     = file("install-apache.sh")
   key_name      = "three_tier_rsa_key"
@@ -33,7 +33,7 @@ resource "aws_autoscaling_group" "asg-1" {
 
 resource "aws_launch_template" "auto-scaling-group-private" {
   name_prefix   = "auto-scaling-group-private"
-  image_id      = "ami-05c13eab67c5d8861"
+  image_id      = data.aws_ami.amazon_linux_2.id
   instance_type = "t2.micro"
   key_name      = "three_tier_rsa_key"
 
